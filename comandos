@@ -1,0 +1,38 @@
+-> deletar cluster kubernetes
+minikube delete
+
+-> iniciar um novo cluster kubernetes
+minikube start
+
+-> criar um novo POD do nginx por exemplo
+kubectl run nginx --image nginx
+
+-> verificar status dos PODS
+kubectl get pods
+
+-> verificar status dos PODS mais completo
+kubectl get pods -o wide
+
+-> verificar informações completas de um POD especifico
+kubectl describe pod nginx
+
+-> criar um POD usando arquivo .yaml
+kubectl create -f <nome_do_arquivo.yaml>
+
+-> deletar um pod existente
+kubectl delete pod <nome_do_pod>
+
+-> verificando se existe um replicaset ativo
+kubectl get replicaset
+
+-> verificando se existe um replicacontroller ativo
+kubectl get replicationcontrolller
+
+-> deletar um replictioncontroller
+kubectl delete replicationcontroller <nome_do_replicationcontroller>
+
+-> realizando scale-up e down de um replicaset
+kubectl scale replicaset <nome_do_replicaset> --replicas=4
+
+-> deletando um replicaset existente
+kubectl delete replicaset <nome_do_replicaset>
