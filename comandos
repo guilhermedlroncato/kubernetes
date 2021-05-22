@@ -36,3 +36,33 @@ kubectl scale replicaset <nome_do_replicaset> --replicas=4
 
 -> deletando um replicaset existente
 kubectl delete replicaset <nome_do_replicaset>
+
+-> criar um deployment
+kubectl create -f <diretorio/nome_do_arquivo_do_deployment> --save-config --record
+
+-> consultar os deployments
+kubectl get deployment  
+
+-> consultar todos os objetos do cluster (pods, replicaset, deployment)
+kubectl get all
+
+-> consultar o status do rollout
+kubectl rollout status deployment/<nome_do_deployment>
+
+-> consultar o historico do rollout (revisões)
+kubectl rollout history deployment/<nome_do_deployment>
+
+-> aplicar atualização no deployment
+kubectl apply -f <diretorio/nome_do_arquivo_do_deployment>
+
+-> consultar o deployment detalhado
+kubectl describe deployment <nome_do_deployment>
+
+-> efetuar rollback da ultima atualização (revisao) do deployment
+kubectl rollout undo deployment/<nome_do_deployment>
+
+-> efetuar rollback de um revisão especifica de atualização (revisao) do deployment
+kubectl rollout undo deployment/<nome_do_deployment> --to-revision=<numero_da_revisao>
+
+-> escalando um deployment
+kubectl scale deployment/<nome_do_deployment> --replica=<qtde_de_replicas>
