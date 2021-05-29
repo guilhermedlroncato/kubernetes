@@ -69,3 +69,6 @@ kubectl scale deployment/<nome_do_deployment> --replica=<qtde_de_replicas>
 
 -> comando para executar um comando em um pod
 kubectl exec -it <nome_do_pod> <comando>
+
+-> comando para consultar o ip/porta de um service 
+minikube service <nome_do_service> --url

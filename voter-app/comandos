@@ -1,0 +1,11 @@
+- Comandos para subir a aplicação
+kubectl create -f namespaces/ --save-config --record
+kubectl create -f deployments/ --save-config --record
+kubectl create -f services/ --save-config --record
+
+- Conferindo o status do Cluster
+kubectl get all -v vote
+
+- Pegando as url para acessar a pagina de Vote e Result
+minikube service result --url -n vote
+minikube service vote --url -n vote
